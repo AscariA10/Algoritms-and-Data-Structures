@@ -8,3 +8,7 @@ if (button && input) {
       concatenation(input.value, "hello!");
    });
 }
+
+type Person = { name: string; age?: number };
+let user: Person = { name: "Alice" };
+user.age = 27;
