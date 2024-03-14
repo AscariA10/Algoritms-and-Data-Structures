@@ -15,12 +15,10 @@ const compare = (str1, str2): boolean => {
    return stringSort(str1) === stringSort(str2);
 };
 
-const test1 = compare(a, b);
-const test2 = compare(a, c);
-const test3 = compare(a, d);
+// const test1 = compare(a, b);
+// const test2 = compare(a, c);
+// const test3 = compare(a, d);
 
-console.log(test1);
-console.log(test2);
-console.log(test3);
-
-// * 2nd method
+// console.log(test1);
+// console.log(test2);
+// console.log(test3);
