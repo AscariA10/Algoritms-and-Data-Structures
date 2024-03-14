@@ -1,23 +1,41 @@
 // change all spaces to "%20"
+// 1st var
+// const wordToChange: string = "Mr John Smith    ";
 
-const wordToChange: string = "Mr John Smith    ";
+// const transform = (word: string, wordLength: number): string => {
+//    const wordArr: string[] = word.split("");
+//        console.log(wordArr);
+//    let pointer: number = 0;
 
-const transform = (word: string, wordLength: number): string => {
-   const wordArr: string[] = word.split("");
-   //    console.log(wordArr);
-   let pointer: number = 0;
+//    while (pointer < wordLength) {
+//       if (wordArr[pointer] === " ") {
+//          wordArr[pointer] = "%20";
+//            console.log(wordArr, wordArr.length);
+//       }
 
-   while (pointer < wordLength) {
-      if (wordArr[pointer] === " ") {
-         wordArr[pointer] = "%20";
-         //  console.log(wordArr, wordArr.length);
+//       pointer += 1;
+//    }
+//    return wordArr.join("");
+// };
+
+// const test1 = transform(wordToChange, 13);
+
+// console.log(test1);
+
+// 2nd var
+const wordToChange: string = "Mr John Smith";
+
+const transformFunc = word => {
+   const wordArray = word.split("");
+   let pointer = word.length;
+   while (pointer > 0) {
+      if (wordArray[pointer] === " ") {
+         wordArray[pointer] = "%20";
       }
-
-      pointer += 1;
+      pointer -= 1;
    }
-   return wordArr.join("");
+   return wordArray.join("");
 };
 
-const test1 = transform(wordToChange, 13);
-
-console.log(test1);
+const result = transformFunc(wordToChange);
+console.log(result);
