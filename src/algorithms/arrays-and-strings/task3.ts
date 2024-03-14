@@ -38,4 +38,5 @@ const transformFunc = word => {
 };
 
 const result = transformFunc(wordToChange);
+
 console.log(result);
