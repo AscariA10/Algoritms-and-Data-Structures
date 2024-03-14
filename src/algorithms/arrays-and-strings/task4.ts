@@ -19,7 +19,7 @@ const palindromeCheck = (word: string): boolean => {
       }
    }
    console.log(palindromeCounter);
-   return !(palindromeCounter > 1);
+   return palindromeCounter <= 1;
 };
 
 const test1 = palindromeCheck(testWord);
