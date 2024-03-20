@@ -37,4 +37,4 @@ function isUniqueSlow(testValue: string): boolean {
    return true;
 }
 
-// console.log(isUniqueSlow("fgdhjljkancbgyuqior4y67439802"));
+console.log(isUniqueSlow("fgdhjljkancbgyuqior4y67439802"));
