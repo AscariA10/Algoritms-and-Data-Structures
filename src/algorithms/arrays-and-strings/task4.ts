@@ -6,6 +6,7 @@ const palindromeCheck = (word: string): boolean => {
    let palindromeCounter: number = 0;
 
    for (let i = 0; i < word.length; i += 1) {
+      // add check here
       if (!palTable[word[i]]) {
          palTable[word[i]] = 1;
       } else {
