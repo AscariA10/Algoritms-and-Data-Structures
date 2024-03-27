@@ -11,4 +11,5 @@ const cyclicShiftChecker: TcyclicShift = (str1, str2) => {
    return concatenatedString.includes(str2);
 };
 
+console.log(cyclicShiftChecker("string", "ringst"));
 console.log(cyclicShiftChecker("string", "rinstg"));
