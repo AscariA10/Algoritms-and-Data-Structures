@@ -5,7 +5,11 @@ interface IlistNode {
 
 interface IlinkedList {
    head: IlistNode | null;
+   add(data: any): void;
    getSize(): number;
+   getFirst(): IlistNode | null;
+   getLast(): IlistNode | null;
+   clear(): void;
 }
 
 class ListNode implements IlistNode {
@@ -16,10 +20,24 @@ class ListNode implements IlistNode {
    }
 }
 
-class LinkedList implements IlinkedList {
+export class LinkedList implements IlinkedList {
+   //    private head: IlistNode | null = null;
    constructor(public head) {
       this.head = head || null;
    }
+
+   add(data) {
+      if (!this.head) {
+         this.head = new ListNode(data);
+      } else {
+         let tale = this.head;
+         while (tale.next) {
+            tale = tale.next;
+         }
+         tale.next = new ListNode(data);
+      }
+   }
+
    getSize() {
       let head = this.head;
       let size = 0;
@@ -28,6 +46,24 @@ class LinkedList implements IlinkedList {
          head = head.next;
       }
       return size;
+   }
+
+   getFirst() {
+      return this.head;
+   }
+
+   getLast() {
+      let lastNode = this.head;
+      if (lastNode) {
+         while (lastNode.next) {
+            lastNode = lastNode.next;
+         }
+      }
+      return lastNode;
+   }
+
+   clear() {
+      this.head = null;
    }
 }
 
@@ -38,5 +74,5 @@ testNode1.next = testNode2;
 testNode2.next = testNode3;
 
 export const testLinkedList = new LinkedList(testNode1);
-
+export const emptyLinkedList = new LinkedList(null);
 // console.log(testLinkedList);
