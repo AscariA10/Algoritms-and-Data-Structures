@@ -6,6 +6,7 @@ interface IlistNode {
 interface IlinkedList {
    head: IlistNode | null;
    add(data: any): void;
+   remove(data: any): IlistNode | null;
    getSize(): number;
    getFirst(): IlistNode | null;
    getLast(): IlistNode | null;
@@ -36,6 +37,23 @@ export class LinkedList implements IlinkedList {
          }
          tale.next = new ListNode(data);
       }
+   }
+
+   remove(data) {
+      if (!this.head) {
+         return null;
+      }
+      let currentNode = this.head;
+      let nextNode = currentNode.next;
+      while (nextNode) {
+         if (nextNode.data === data) {
+            currentNode.next = nextNode.next;
+            return nextNode;
+         } else {
+            currentNode = nextNode;
+         }
+      }
+      return null;
    }
 
    getSize() {
