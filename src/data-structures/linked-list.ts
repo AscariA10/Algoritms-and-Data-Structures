@@ -13,6 +13,11 @@ interface IlinkedList {
    clear(): void;
 }
 
+export const LinkedList = function (value) {
+   this.value = value;
+   this.next = null;
+};
+
 class ListNode implements IlistNode {
    next;
    constructor(public data) {
@@ -21,7 +26,7 @@ class ListNode implements IlistNode {
    }
 }
 
-export class LinkedList implements IlinkedList {
+export class TestLinkedList implements IlinkedList {
    //    private head: IlistNode | null = null;
    constructor(public head) {
       this.head = head || null;
@@ -91,6 +96,6 @@ const testNode3 = new ListNode(15);
 testNode1.next = testNode2;
 testNode2.next = testNode3;
 
-export const testLinkedList = new LinkedList(testNode1);
-export const emptyLinkedList = new LinkedList(null);
+// export const testLinkedList = new LinkedList(testNode1);
+// export const emptyLinkedList = new LinkedList(null);
 // console.log(testLinkedList);

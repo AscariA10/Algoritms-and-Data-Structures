@@ -2,10 +2,12 @@
 // we have data only from node, so just rewrite data from next
 // node to current
 
-const LinkedList = function (value) {
-   this.value = value;
-   this.next = null;
-};
+import { LinkedList } from "../../data-structures/linked-list";
+
+// LinkedList = function (value) {
+//    this.value = value;
+//    this.next = null;
+// };
 const deleteMidNode = node => {
    let currentNode = node;
 
