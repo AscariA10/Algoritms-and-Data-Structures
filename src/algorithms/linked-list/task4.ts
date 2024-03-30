@@ -48,3 +48,10 @@ f24.next = g24;
 
 const newa24 = readjustment(a24, 5);
 printList(newa24);
+
+// let nextNode = currentNode.next;
+
+// currentNode.next = head;
+// head = currentNode;
+
+// currentNode = nextNode;
