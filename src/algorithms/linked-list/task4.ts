@@ -2,7 +2,7 @@
 
 // I try to do it around 1 list and sending values to head and tail
 
-import { LinkedList } from "../../data-structures/linked-list";
+import { LinkedList, printList } from "../../data-structures/linked-list";
 
 const readjustment = (currentNode, middleValue) => {
    let head = currentNode;
@@ -22,13 +22,6 @@ const readjustment = (currentNode, middleValue) => {
 
    tail.next = null;
    return head;
-};
-
-var printList = function (a) {
-   while (a !== null) {
-      console.log(a.value);
-      a = a.next;
-   }
 };
 
 var a24 = new LinkedList(3);

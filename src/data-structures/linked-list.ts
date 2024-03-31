@@ -18,6 +18,13 @@ export const LinkedList = function (value) {
    this.next = null;
 };
 
+export const printList = function (a) {
+   while (a !== null) {
+      console.log(a.value);
+      a = a.next;
+   }
+};
+
 class ListNode implements IlistNode {
    next;
    constructor(public data) {
