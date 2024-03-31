@@ -25,7 +25,7 @@ export const printList = function (a) {
    }
 };
 
-class ListNode implements IlistNode {
+export class ListNode implements IlistNode {
    next;
    constructor(public data) {
       this.data = data;
