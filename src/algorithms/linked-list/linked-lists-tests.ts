@@ -1,4 +1,4 @@
-import { testLinkedList, emptyLinkedList, LinkedList } from "../../data-structures/linked-list";
+// import { testLinkedList, emptyLinkedList, LinkedList } from "../../data-structures/linked-list";
 import { DoubleLinkedList } from "../../data-structures/double-linked-list";
 
 // const linkedList = new LinkedList(null);
