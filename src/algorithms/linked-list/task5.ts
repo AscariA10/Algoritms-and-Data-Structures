@@ -1,6 +1,6 @@
 //  ? make sum of two numbers which write in 2 LL
 
-import { LinkedList, TestLinkedList, printList, ListNode } from "../../data-structures/linked-list";
+import { LinkedList, printList, ListNode, TestLinkedList } from "../../data-structures/linked-list";
 
 const sumList = (list1, list2) => {
    let node1 = list1;
