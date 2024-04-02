@@ -1,9 +1,10 @@
-var Queue = require("./Queue");
+import { Queue } from "./queue";
 
-export const BST = function (value) {
+export const BST = function (value?) {
    this.value = value;
    this.left = null;
    this.right = null;
+   this.isRightClose = false;
 };
 
 BST.prototype.insert = function (value) {
@@ -18,15 +19,16 @@ BST.prototype.insert = function (value) {
          this.right = new BST(value);
       } else {
          this.right.insert(value);
+         return;
       }
    }
 };
 
 BST.prototype.printLevelOrder = function () {
-   var level = [];
-   var q = new Queue();
-   var nextq = new Queue();
-   var currNode;
+   let level = [];
+   let q = new Queue();
+   let nextq = new Queue();
+   let currNode;
 
    q.add(this);
    while (!q.isEmpty()) {
@@ -47,3 +49,16 @@ BST.prototype.printLevelOrder = function () {
       }
    }
 };
+/* TEST */
+// 1, 2, 3, 4, 5, 6, 7
+// @ts-ignore
+// var bst = new BST();
+// bst.insert(4);
+// bst.insert(2);
+// bst.insert(6);
+// bst.insert(1);
+// bst.insert(3);
+// bst.insert(5);
+// bst.insert(7);
+
+// bst.printLevelOrder();
