@@ -18,7 +18,7 @@ Queue.prototype.add = function (value) {
 };
 
 Queue.prototype.remove = function () {
-   var removed = this.front;
+   var removed: any = this.front;
    if (this.front === this.back) {
       this.front = null;
       this.back = null;
