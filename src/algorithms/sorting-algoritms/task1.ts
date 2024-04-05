@@ -1,54 +1,35 @@
-// const quickSort = array => {
-//    if (array.length <= 1) {
-//       return array;
-//    }
+// ? make merge of two sorted arrays
+// ? one of them have enough place for two
 
-//    const pivot = array[Math.floor(array.length / 2)];
-//    const leftArray = [];
-//    const rightArray = [];
+const arrayMerge = (array1, array2, length1, length2) => {
+   // array1 > array2
+   let pointer1 = length1 - 1;
+   let pointer2 = length2 - 1;
+   let mergedPointer = length1 + length2 - 1;
 
-//    for (let i = 0; i < array.length; i += 1) {
-//       if (array[i] < pivot) {
-//          // @ts-ignore
-//          leftArray.push(array[i]);
-//       } else if (array[i] >= pivot) {
-//          // @ts-ignore
-//          rightArray.push(array[i]);
-//       }
-//    }
-//    console.log("pivot", pivot);
-//    console.log("leftArray", leftArray);
-//    console.log("rightArray", rightArray);
-//    return [...quickSort(leftArray), pivot, ...quickSort(rightArray)];
-// };
-
-function quickSort(arr) {
-   if (arr.length <= 1) {
-      return arr;
-   }
-
-   const pivot = arr[Math.floor(arr.length / 2)];
-   const less = [];
-   const greater = [];
-
-   for (let i = 0; i < arr.length; i++) {
-      if (arr[i] < pivot) {
-         // @ts-ignore
-         less.push(arr[i]);
-      } else if (arr[i] > pivot) {
-         // @ts-ignore
-         greater.push(arr[i]);
+   while (pointer2 >= 0) {
+      if (pointer1 >= 0 && array1[pointer1] > array2[pointer2]) {
+         array1[mergedPointer] = array1[pointer1];
+         pointer1 -= 1;
+      } else {
+         array1[mergedPointer] = array2[pointer2];
+         pointer2 -= 1;
       }
+      mergedPointer -= 1;
    }
 
-   return [...quickSort(less), pivot, ...quickSort(greater)];
-}
+   // for (let i = mergedPointer; i >= 0; i -= 1) {
+   //    console.log(array1[i]);
+   //    if (array1[pointer1] > array2[pointer2] && pointer1 >= 0) {
+   //       array1[i] = array1[pointer1];
+   //       pointer1 -= 1;
+   //    } else {
+   //       array1[i] = array2[pointer2];
+   //       pointer2 -= 1;
+   //    }
+   // }
+   return array1;
+};
 
-// // Приклад використання:
-// const array = [5, 3, 1, 6, 2, 4];
-// const sortedArray = quickSort(array);
-// console.log(sortedArray);
-
-const myArray = [4, 2, 5, 7, 6, 7, 1];
-
-console.log(quickSort(myArray));
+const resultAM = arrayMerge([1, 3, 5, 7, 9, , , ,], [2, 4, 6, 8], 5, 4);
+console.log(resultAM);
