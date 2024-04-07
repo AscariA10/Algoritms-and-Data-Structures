@@ -31,5 +31,5 @@ const arrayMerge = (array1, array2, length1, length2) => {
    return array1;
 };
 
-const resultAM = arrayMerge([1, 3, 5, 7, 9, , , ,], [2, 4, 6, 8], 5, 4);
+const resultAM = arrayMerge([1, 3, 5, 7, 9, , , , ,], [1, 2, 4, 6, 8], 5, 5);
 console.log(resultAM);
