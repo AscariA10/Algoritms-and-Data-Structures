@@ -1,8 +1,6 @@
 // ? create an algorithm where anagrams of words
 // ? sorted one after one
 
-const anagramComparator = () => {};
-
 const anagramGrouping = array => {
    const anagramModified = array.map(word => {
       return { original: word, sorted: word.split().sort().join("") };
