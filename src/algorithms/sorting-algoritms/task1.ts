@@ -2,7 +2,7 @@
 // ? one of them have enough place for two
 
 const arrayMerge = (array1, array2, length1, length2) => {
-   // array1 > array2
+   //! array1 > array2
    let pointer1 = length1 - 1;
    let pointer2 = length2 - 1;
    let mergedPointer = length1 + length2 - 1;

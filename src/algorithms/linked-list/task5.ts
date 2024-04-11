@@ -1,6 +1,6 @@
 //  ? make sum of two numbers which write in 2 LL
 
-import { LinkedList, printList, ListNode, TestLinkedList } from "../../data-structures/linked-list";
+import { LinkedList, printList } from "../../data-structures/linked-list";
 
 const sumList = (list1, list2) => {
    let node1 = list1;
@@ -39,8 +39,7 @@ const sumList = (list1, list2) => {
       if (node2 !== null) {
          node2 = node2.next;
       }
-
-      //   end of cycle
+      //*   end of cycle
    }
    if (tens > 0) {
       node3.next = new LinkedList(tens);
@@ -96,14 +95,14 @@ const sumList = (list1, list2) => {
 // console.log(testLL2);
 
 const a = new LinkedList(9);
-const b = new LinkedList(9);
+const b = new LinkedList(3);
 const c = new LinkedList(9);
 
 a.next = b;
 b.next = c;
 
 const d = new LinkedList(9);
-const e = new LinkedList(9);
+const e = new LinkedList(5);
 const f = new LinkedList(9);
 
 d.next = e;

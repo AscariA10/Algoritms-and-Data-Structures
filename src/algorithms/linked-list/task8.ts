@@ -1,4 +1,4 @@
-// ? lood detection by Floyds algoirthm
+// ? loop detection by Floyds algoirthm
 
 import { LinkedList } from "../../data-structures/linked-list";
 
