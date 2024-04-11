@@ -1,6 +1,6 @@
 // ? delete node in the middle, not first not last
-// we have data only from node, so just rewrite data from next
-// node to current
+// * we have data only from node, so just rewrite data from next
+// * node to current
 
 import { LinkedList } from "../../data-structures/linked-list";
 
